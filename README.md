@@ -73,6 +73,7 @@ Compix runs a background cleanup worker that deletes processed videos older than
 ▶️ Running Compix Locally
 # Create virtual environment
 python -m venv venv
+
 venv\Scripts\activate
 
 # Install dependencies
