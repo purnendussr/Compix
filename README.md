@@ -10,13 +10,7 @@ Compix is a production-style backend system that allows users to upload videos, 
 
 🎥 FFmpeg Video Compression
 
-📊 Live Compression Progress Tracking (%)
-
 🗄 Database-Backed Job Status (SQLite)
-
-🔒 Upload Validation (File Type & Size Limits)
-
-🧹 Automatic Cleanup of Old Files
 
 🌐 RESTful API Design
 
@@ -28,21 +22,19 @@ Compix stores metadata in a database
 
 Compression runs in a background thread
 
-FFmpeg progress is tracked in real-time
+FFmpeg progress is tracked 
 
 User checks processing status via API
 
 Compressed video becomes available for download
 
-Old files are automatically cleaned to save storage
 
 🧱 Tech Stack
-Layer	Technology
 Backend Framework	FastAPI
 Video Processing	FFmpeg
 Database	SQLite
 Async Jobs	Python Threads
-API Documentation	Swagger / OpenAPI
+API Documentation	Swagger
 📡 API Endpoints
 Method	Endpoint	Description
 POST	/upload	Upload video for compression
@@ -53,22 +45,10 @@ UPLOADING → PROCESSING → DONE
                      ↘ FAILED
 
 
-Example response:
-
-{
-  "status": "PROCESSING",
-  "progress": 57
-}
-
 🔒 Upload Restrictions
 
 Allowed formats: .mp4, .mov, .mkv
 
-Max size: 200MB
-
-🧹 Automatic File Cleanup
-
-Compix runs a background cleanup worker that deletes processed videos older than 24 hours, ensuring storage remains under control.
 
 ▶️ Running Compix Locally
 # Create virtual environment
@@ -90,17 +70,10 @@ Open API docs at:
 
 Compix is designed to showcase backend engineering skills:
 
-Asynchronous job processing
-
 External tool integration (FFmpeg)
-
-Real-time progress monitoring
 
 Database-backed task tracking
 
-Secure file handling
-
-Automated system maintenance
 
 🧑‍💻 Author
 
